@@ -1,0 +1,55 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title &#x905;&#x92C;Tak News - Best News Services
+  link(rel='shortcut icon' href='../static/images/1.png' type='image/x-icon')
+  link(rel='stylesheet' href='../static/style.css')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css2?family=Baloo+2&display=swap' rel='stylesheet')
+#insight
+  #enclosure
+    form(action='/')
+      select#country(name='country' required='')
+        option(value='' selected='') --Select the country--
+        option(value='in') India
+        option(value='us') USA
+        option(value='au') Australia
+        option(value='ru') Russia
+        option(value='jp') Japan
+        option(value='it') Italy
+        option(value='fr') France
+        option(value='gr') Germany
+      select#category(name='category' required='')
+        option(value='' selected='') --Select Category--
+        option(value='business') Business
+        option(value='entertainment') Entertainment
+        option(value='health') Health
+        option(value='science') Science
+        option(value='sports') Sports
+        option(value='technology') Technology
+        option(value='technology') General
+      button#submit.primary-btn(type='submit') Proceed
+      button#reset.primary-btn(type='reset') Reset
+    p(style='color:white;') Or
+    p#para
+      a#defaultNews(href='/') Directly jump to the news page
+#mainBox
+  nav#dynamicNav
+    #leftNav
+      #arrowBtn
+        #line-1.line
+        #line-2.line
+        #line-3.line
+    #rightNav
+      div
+        input#searchArea(type='text' placeholder='Search by keyword')
+        input#searchButton(type='button' value='Search')
+  #main
+    // all the Markup comes dynamically here
+  #bottomSections
+    // all the Markup comes dynamically here
+  script(src='../static/script.js')
